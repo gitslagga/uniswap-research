@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import './uniswap_sdk'
+import './contract_usage'
 
 function App() {
   return (
