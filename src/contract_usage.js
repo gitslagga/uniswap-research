@@ -73,10 +73,6 @@ async function contractUsage() {
         })
 
         // 进行Token兑换
-        // 因为有奖励，所有需要执行 addTokenPair()
-        // tokenA = 0x516de3a7A567d81737e3a46ec4FF9cFD1fcb0136, TokenB = 0xdF7384e90fe750A14ee77451b74C9E9619a5Ef88
-        // _totalETH = 1000000000000000000, _totalTD = 1, _transactions = 98
-
         // WETH => USDT
         let routeContractWithSigner = routeContract.connect(signer)
         let amountIn = ethers.utils.parseUnits('1.0', 18)
@@ -98,7 +94,7 @@ async function contractUsage() {
         deadline = parseInt(new Date().getTime()/1000)+20*60
 
         routeContractWithSigner.sell(amountIn, amountOutMin, path, to, deadline).then((result) => {
-            console.log('SwapExactTokensForTokens: ')
+            console.log('sell: ')
             console.log(result)
         })
     }
