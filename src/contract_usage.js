@@ -81,10 +81,10 @@ async function contractUsage() {
         let to = currentAccount
         let deadline = parseInt(new Date().getTime()/1000)+20*60
 
-        // routeContractWithSigner.buy(amountOutMin, path, to, deadline, {value: ethers.utils.parseUnits('1.0', 18)}).then((result) => {
-        //     console.log('buy: ')
-        //     console.log(result)
-        // })
+        routeContractWithSigner.buy(amountOutMin, path, to, deadline, {value: amountIn}).then((result) => {
+            console.log('buy: ')
+            console.log(result)
+        })
 
         // USDT => WETH
         amountIn = ethers.utils.parseUnits("50", 6)
@@ -100,5 +100,5 @@ async function contractUsage() {
     }
 }
 
-contractUsage()
+// contractUsage()
 
