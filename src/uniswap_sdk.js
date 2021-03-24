@@ -44,8 +44,11 @@ async function getPriceImpact() {
     console.log(value.toString())
     console.log(amountOutMin.toString())
     console.log(path)
+    console.log(to)
     console.log(deadline)
 }
 
-// getPriceInfo()
-// getPriceImpact()
+
+export {
+    getPriceInfo, getPriceImpact
+}

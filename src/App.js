@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import './uniswap_sdk'
-import './contract_usage'
+import {getPriceInfo, getPriceImpact} from './uniswap_sdk'
+import {contractUsage} from './contract_usage'
+import {walletConnect} from './wallet_connect'
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={getPriceInfo}>getPriceInfo</button>
+        <button onClick={getPriceImpact}>getPriceImpact</button>
+        <button onClick={contractUsage}>contractUsage</button>
+        <button onClick={walletConnect}>walletConnect</button>
       </header>
     </div>
   );
